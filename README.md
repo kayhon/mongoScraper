@@ -1,6 +1,6 @@
 # mongoScraper
 
-### To view deployed version, _**[click here!](https:///)**_
+### To view deployed version, _**[click here!](https://https://protected-wildwood-17485.herokuapp.com/)**_
 This app scrapes articles from the New York Times website and lets users save articles and leave comments on the latest news.
 
 ![mongoScraper Img](public/assets/imgages/.jpg)
@@ -36,27 +36,27 @@ This app scrapes articles from the New York Times website and lets users save ar
 `express-handlebars`: a powerful front-end builder without requiring multiple html pages
 
 #### File Structure
-
-├── controllers
-|  ├── fetch.js
-|  ├── headline.js
-|  └── note.js
-├── models
-|  ├── Headline.js
-|  ├── index.js
-|  └── Note.js
-├── public
-|  └── assets
-├── routes
-|  ├── api
-|  ├── index.js
-|  └── view
-├── scripts
-|  └── scrape.js
-└── views
-|   ├── home.handlebars
-|   ├── layouts
-|   └── saved.handlebars
-├── package-lock.json
-├── package.json
-└── server.js
+<br>
+├── controllers<br>
+|  ├── fetch.js<br>
+|  ├── headline.js<br>
+|  └── note.js<br>
+├── models<br>
+|  ├── Headline.js<br>
+|  ├── index.js<br>
+|  └── Note.js<br>
+├── public<br>
+|  └── assets<br>
+├── routes<br>
+|  ├── api<br>
+|  ├── index.js<br>
+|  └── view<br>
+├── scripts<br>
+|  └── scrape.js<br>
+└── views<br>
+|   ├── home.handlebars<br>
+|   ├── layouts<br>
+|   └── saved.handlebars<br>
+├── package-lock.json<br>
+├── package.json<br>
+└── server.js<br>
