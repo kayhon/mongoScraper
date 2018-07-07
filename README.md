@@ -1,6 +1,6 @@
 # mongoScraper
 
-## To view deployed version, _**[click here!](https://https://protected-wildwood-17485.herokuapp.com/)**_
+## To view deployed version, _**[click here!](https://protected-wildwood-17485.herokuapp.com/)**_
 This app scrapes articles from the New York Times website and lets users save articles and leave comments on the latest news.
 <br>
 <br>
