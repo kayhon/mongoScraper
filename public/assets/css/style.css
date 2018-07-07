@@ -1,0 +1,180 @@
+/* step 5 "did prelim styling nothing too fancy will be back
+to do more at the very end" ( goto config/routes.js for step 6
+to make a route to check how styling looks) */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 80px;
+  background-image: url("../images/ny10.jpg");
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  color: rgb(253, 253, 253);
+  background-color: rgb(5, 5, 5);
+}
+
+.navbar {
+  margin-bottom: 0;
+  background-color: rgb(5, 5, 5);
+}
+
+.jumbotron {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  /* font-family: "Georgia"; */
+  font-family: "Anton";
+  box-shadow: 10px 5px 20px 2px black;
+}
+
+.jumbotron .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: auto;
+  background: linear-gradient(#333, black);
+  opacity: 0.7;
+}
+
+.jumbotron .background-image {
+  height: 100%;
+  background-image: url("../images/ny.jpg");
+  background-size: cover;
+}
+
+.jumbotron .caption h1 {
+  color:  rgb(91,192,222);
+  text-shadow: 8px 8px 5px black;
+}
+
+.jumbotron h1 {
+  font-size: 81px;
+  font-weight: 800;
+}
+
+.jumbotron .caption {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+}
+
+.jumbotron p {
+  font-size: 30px;
+}
+
+.panel {
+  border-radius: 0;
+  box-shadow: 4px 4px 20px black;
+}
+
+.panel.panel-default .panel-heading {
+  /* this is color for ea panel */
+  position: relative;
+  /* color: rgb(253, 253, 253);
+  background-color: rgb(180, 217, 248); */
+  background: #5BC0DE;
+background: -moz-linear-gradient(top, #5BC0DE 0%, #FFFFFF 100%);
+background: -webkit-linear-gradient(top, #5BC0DE 0%, #FFFFFF 100%);
+background: linear-gradient(to bottom, #5BC0DE 0%, #FFFFFF 100%);
+}
+
+.panel.panel-default .panel-heading h3 {
+  color: rgb(0, 0, 0);
+ }
+
+.panel.panel-default .panel-heading .btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  box-shadow: 4px 4px 20px black;
+}
+
+/* ea panel heading text */
+.panel.panel-default .panel-heading a.article-link {
+  color: rgb(0, 132, 247);
+  text-shadow: 1px 2px 3px black;
+  
+}
+
+.panel.panel-default .panel-heading .btn.delete {
+  right: 100px;
+}
+
+.panel.panel-default .panel-body {
+  font-size: 16px;
+  color: rgb(0, 11, 107);
+  text-shadow: 1px 1px 1px black;
+}
+
+.panel.panel-default .panel-heading .article-link {
+  color: white;
+  display: inline-block;
+  width: 81%;
+}
+
+.footer > .container > p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  padding-bottom: 6px;
+  padding-left: 11px;
+  margin: 0;
+  font-weight: 801;
+  background: rgb(0, 0, 0);
+}
+
+.navbar-nav > li > a.scrape-new {
+  padding: 11px;
+  margin-top: 10px;
+  font-weight: 800;
+  color: white;
+}
+
+.navbar-nav > li > a.scrape-new:hover {
+  background:   rgb(23, 187, 216);
+}
+
+.navbar-nav > li > a.scrape-new:active {
+  background: rgb(30, 252, 1);
+}
+
+.scrape-new {
+  cursor: pointer;
+}
+
+.m-top-80 {
+  margin-top: 81px;
+}
+
+textarea {
+  padding: 11px;
+  resize: none;
+}
+
+.bootbox-body .btn {
+  float: right;
+  margin: 5px;
+}
+
+.note.list-group-item {
+  padding: 30px;
+}
+
+.note.list-group-item .btn {
+  position: relative;
+  bottom: 11px;
+}
