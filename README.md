@@ -49,4 +49,4 @@ This app scrapes articles from the New York Times website and lets users save ar
 
 #### File Structure
 <br>
-![fileStructure Img](public/assets/images/file.jpg)<br>
+![fileStructure Img](public/assets/images/file.jpg)
