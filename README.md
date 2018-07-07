@@ -3,13 +3,13 @@
 ### To view deployed version, _**[click here!](https://https://protected-wildwood-17485.herokuapp.com/)**_
 This app scrapes articles from the New York Times website and lets users save articles and leave comments on the latest news.
 <br>
-Home Section:
+Home Section:<br>
 ![mongoScraper Img](public/assets/images/home.jpg)
 <br>
-Saved Section:
+Saved Section:<br>
 ![mongoScraper Img](public/assets/images/home2.jpg)
 <br>
-Saved Section with Note:
+Saved Section with Note:<br>
 ![mongoScraper Img](public/assets/images/home3.jpg)
 <br>
 ## Technologies used:
@@ -44,4 +44,4 @@ Saved Section with Note:
 
 #### File Structure
 <br>
-![FileStructure Img](public/assets/images/file.jpg)
+![FileStructure Img](public/assets/images/file.jpg)<br>
