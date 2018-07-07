@@ -48,5 +48,4 @@ This app scrapes articles from the New York Times website and lets users save ar
 `express-handlebars`: a powerful front-end builder without requiring multiple html pages
 
 #### File Structure
-<br>
-![fileStructure Img](public/assets/images/file.jpg)<br>
+![fpic Img](public/assets/images/fpic.jpg)
