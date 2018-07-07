@@ -3,7 +3,7 @@
 ### To view deployed version, _**[click here!](https://https://protected-wildwood-17485.herokuapp.com/)**_
 This app scrapes articles from the New York Times website and lets users save articles and leave comments on the latest news.
 
-![mongoScraper Img](public/assets/imgages/.jpg)
+![mongoScraper Img](public/assets/imgages/home.jpg)
 
 ## Technologies used:
 * Node.js
@@ -38,25 +38,25 @@ This app scrapes articles from the New York Times website and lets users save ar
 #### File Structure
 <br>
 ├── controllers<br>
-|  ├── fetch.js<br>
-|  ├── headline.js<br>
-|  └── note.js<br>
+  ├── fetch.js<br>
+  ├── headline.js<br>
+  └── note.js<br>
 ├── models<br>
-|  ├── Headline.js<br>
-|  ├── index.js<br>
-|  └── Note.js<br>
+  ├── Headline.js<br>
+  ├── index.js<br>
+  └── Note.js<br>
 ├── public<br>
-|  └── assets<br>
+  └── assets<br>
 ├── routes<br>
-|  ├── api<br>
-|  ├── index.js<br>
-|  └── view<br>
+  ├── api<br>
+  ├── index.js<br>
+  └── view<br>
 ├── scripts<br>
-|  └── scrape.js<br>
+  └── scrape.js<br>
 └── views<br>
-|   ├── home.handlebars<br>
-|   ├── layouts<br>
-|   └── saved.handlebars<br>
+   ├── home.handlebars<br>
+   ├── layouts<br>
+   └── saved.handlebars<br>
 ├── package-lock.json<br>
 ├── package.json<br>
 └── server.js<br>
