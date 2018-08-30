@@ -1,4 +1,4 @@
-// step 7 here 
+// step 7 here
 // ((for step8 go to note.js ))
 
 // npm package
@@ -9,14 +9,13 @@ var Schema = mongoose.Schema;
 
 // create new schemas name | &that requires headline &summary
 var headlineSchema = new Schema({
-
   headline: {
     type: String,
     required: true,
-// mandatory so we dont get repeat articles over and over
+    // mandatory so we dont get repeat articles over and over
     unique: true
   },
- 
+
   summary: {
     type: String,
     required: true
@@ -26,7 +25,7 @@ var headlineSchema = new Schema({
     type: String,
     required: true
   },
- 
+
   date: String,
   saved: {
     type: Boolean,
@@ -36,6 +35,5 @@ var headlineSchema = new Schema({
 });
 
 var Headline = mongoose.model("Headline", headlineSchema);
-
 
 module.exports = Headline;

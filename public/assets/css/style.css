@@ -54,7 +54,7 @@ body {
 }
 
 .jumbotron .caption h1 {
-  color:  rgb(91,192,222);
+  color: rgb(91, 192, 222);
   text-shadow: 8px 8px 5px black;
 }
 
@@ -84,15 +84,15 @@ body {
   position: relative;
   /* color: rgb(253, 253, 253);
   background-color: rgb(180, 217, 248); */
-  background: #5BC0DE;
-background: -moz-linear-gradient(top, #5BC0DE 0%, #FFFFFF 100%);
-background: -webkit-linear-gradient(top, #5BC0DE 0%, #FFFFFF 100%);
-background: linear-gradient(to bottom, #5BC0DE 0%, #FFFFFF 100%);
+  background: #5bc0de;
+  background: -moz-linear-gradient(top, #5bc0de 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(top, #5bc0de 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #5bc0de 0%, #ffffff 100%);
 }
 
 .panel.panel-default .panel-heading h3 {
   color: rgb(0, 0, 0);
- }
+}
 
 .panel.panel-default .panel-heading .btn {
   position: absolute;
@@ -105,7 +105,6 @@ background: linear-gradient(to bottom, #5BC0DE 0%, #FFFFFF 100%);
 .panel.panel-default .panel-heading a.article-link {
   color: rgb(0, 132, 247);
   text-shadow: 1px 2px 3px black;
-  
 }
 
 .panel.panel-default .panel-heading .btn.delete {
@@ -145,7 +144,7 @@ background: linear-gradient(to bottom, #5BC0DE 0%, #FFFFFF 100%);
 }
 
 .navbar-nav > li > a.scrape-new:hover {
-  background:   rgb(23, 187, 216);
+  background: rgb(23, 187, 216);
 }
 
 .navbar-nav > li > a.scrape-new:active {

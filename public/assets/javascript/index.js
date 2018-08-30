@@ -1,29 +1,27 @@
 // step 14 continued.....
-// ((for step15 go to assets/javascript/index.js )) 
-
-
+// ((for step15 go to assets/javascript/index.js ))
 
 // Dont load any javascript until everything on the page is loaded
 // global bootbox
 $(document).ready(function() {
-// set ref to article-container div where all dynamic content goes
-// add event listeners to any dynamically gen "save article"
-// and "scrape new article btn's"
-// div that holds the articles
+  // set ref to article-container div where all dynamic content goes
+  // add event listeners to any dynamically gen "save article"
+  // and "scrape new article btn's"
+  // div that holds the articles
   var articleContainer = $(".article-container");
   $(document).on("click", ".btn.save", article_save);
   $(document).on("click", ".scrape-new", article_scrape);
-// when page ready run this func
+  // when page ready run this func
   initPage();
-// empty article articleContainer. run ajax req for any unsaved hLines
+  // empty article articleContainer. run ajax req for any unsaved hLines
   function initPage() {
     articleContainer.empty();
     $.get("/api/headlines?saved=false").then(function(data) {
-// render headlines if there is any      
+      // render headlines if there is any
       if (data && data.length) {
         renderArticles(data);
       }
-// if not send msg
+      // if not send msg
       else {
         renderEmpty();
       }
@@ -31,22 +29,22 @@ $(document).ready(function() {
   }
 
   function renderArticles(article) {
-// appends html with article data to page
-// passed json array with all avail artcls in db    
+    // appends html with article data to page
+    // passed json array with all avail artcls in db
     var articlePanels = [];
-// pass ea artcl json obj to create_panel func that rtrns
-// bootstrap pannel w/artcl data in it    
+    // pass ea artcl json obj to create_panel func that rtrns
+    // bootstrap pannel w/artcl data in it
     for (var i = 0; i < article.length; i++) {
       articlePanels.push(create_panel(article[i]));
     }
-// after html for artcl stored in articlePanels Array
-// append to articlePanels container
+    // after html for artcl stored in articlePanels Array
+    // append to articlePanels container
     articleContainer.append(articlePanels);
   }
 
   function create_panel(article) {
-// takes in a 1json obj for artcl/h.line and make jquery Element
-// containing all of frmtd html for articlePannel (hLine+id+article)    
+    // takes in a 1json obj for artcl/h.line and make jquery Element
+    // containing all of frmtd html for articlePannel (hLine+id+article)
     var panel = $(
       [
         "<div class='panel panel-default'>",
@@ -65,18 +63,18 @@ $(document).ready(function() {
         "</div>",
         "</div>"
       ].join("")
-// attach artcl id to jQuery Element
-// use after user saves artcle
+      // attach artcl id to jQuery Element
+      // use after user saves artcle
     );
     panel.data("_id", article._id);
-// rtrns constrctd panel jquery element
+    // rtrns constrctd panel jquery element
     return panel;
   }
 
   function renderEmpty() {
-// this func renders html stating thers no artcls to view
-// using a joined array of html string data cuz easier to read/change 
-// than concat string    
+    // this func renders html stating thers no artcls to view
+    // using a joined array of html string data cuz easier to read/change
+    // than concat string
     var emptyAlert = $(
       [
         "<div class='alert alert-info text-center'>",
@@ -93,25 +91,27 @@ $(document).ready(function() {
         "</div>"
       ].join("")
     );
-// appends data to page
+    // appends data to page
     articleContainer.append(emptyAlert);
   }
 
   function article_save() {
-// hapens when user saves artcle
-// when articl was created it had an attached js obj w/ hLine ID
-// to element using .data method, this goes and gets that
-    var articleToSave = $(this).parents(".panel").data();
+    // hapens when user saves artcle
+    // when articl was created it had an attached js obj w/ hLine ID
+    // to element using .data method, this goes and gets that
+    var articleToSave = $(this)
+      .parents(".panel")
+      .data();
     articleToSave.saved = true;
-      $.ajax({
+    $.ajax({
       method: "PUT",
       url: "/api/headlines",
       data: articleToSave
     }).then(function(data) {
-// if success, mongoose sends back ogj w/ key of "ok" w/ val of 1
-// which make "true"
+      // if success, mongoose sends back ogj w/ key of "ok" w/ val of 1
+      // which make "true"
       if (data.ok) {
-// running again loads all articls        
+        // running again loads all articls
         initPage();
       }
     });
@@ -119,10 +119,12 @@ $(document).ready(function() {
 
   function article_scrape() {
     $.get("/api/fetch").then(function(data) {
-// if scrap is succes it compares to those already in collection
-// and re-renders the artcls on page lets user know hwmny      
+      // if scrap is succes it compares to those already in collection
+      // and re-renders the artcls on page lets user know hwmny
       initPage();
-      bootbox.alert("<h3 class='text-center m-top-80'>" + data.message + "<h3>");
+      bootbox.alert(
+        "<h3 class='text-center m-top-80'>" + data.message + "<h3>"
+      );
     });
   }
 });

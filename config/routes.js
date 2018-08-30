@@ -5,32 +5,28 @@ var headlinesController = require("../controllers/headlines");
 var notesController = require("../controllers/notes");
 
 module.exports = function(router) {
-//  renders the home page
+  //  renders the home page
   router.get("/", function(req, res) {
     res.render("home");
   });
-// renders the saved.hndlbrs page
+  // renders the saved.hndlbrs page
   router.get("/saved", function(req, res) {
     res.render("saved");
   });
 
+  // step 13 continued.....
+  // ((for step14 go to assets/javascript/index.js ))
 
-  
- 
-// step 13 continued.....
-// ((for step14 go to assets/javascript/index.js )) 
-
-// api route to get articles
+  // api route to get articles
   router.get("/api/fetch", function(req, res) {
-// req=scrape/fetch data from hLine in controller and 
-// insert uniqle Hline in collection
-     headlinesController.fetch(function(err, docs) {
+    // req=scrape/fetch data from hLine in controller and
+    // insert uniqle Hline in collection
+    headlinesController.fetch(function(err, docs) {
       if (!docs || docs.insertedCount === 0) {
         res.json({
           message: "No new articles today. Check back again tomorrow!"
         });
-      }
-      else {
+      } else {
         res.json({
           message: "Added " + docs.insertedCount + " new articles!"
         });
@@ -38,9 +34,9 @@ module.exports = function(router) {
     });
   });
 
-// grabs all Hlines in DB
+  // grabs all Hlines in DB
   router.get("/api/headlines", function(req, res) {
-// user req defined by query, not specified = all, specified = 1
+    // user req defined by query, not specified = all, specified = 1
     headlinesController.get(req.query, function(data) {
       res.json(data);
     });
@@ -48,14 +44,14 @@ module.exports = function(router) {
 
   router.delete("/api/headlines/:id", function(req, res) {
     var query = { _id: req.params.id };
-      headlinesController.delete(query, function(err, data) {
-         res.json(data);
+    headlinesController.delete(query, function(err, data) {
+      res.json(data);
     });
   });
 
   router.put("/api/headlines", function(req, res) {
-      headlinesController.update(req.body, function(err, data) {
-       res.json(data);
+    headlinesController.update(req.body, function(err, data) {
+      res.json(data);
     });
   });
 
@@ -67,19 +63,19 @@ module.exports = function(router) {
 
   router.get("/api/notes/:headline_id", function(req, res) {
     var query = { _id: req.params.headline_id };
-     notesController.get(query, function(err, data) {
-         res.json(data);
+    notesController.get(query, function(err, data) {
+      res.json(data);
     });
   });
 
   router.delete("/api/notes/:id", function(req, res) {
     var query = { _id: req.params.id };
     notesController.delete(query, function(err, data) {
-         res.json(data);
+      res.json(data);
     });
   });
 
-// new notes to articles
+  // new notes to articles
   router.post("/api/notes", function(req, res) {
     notesController.save(req.body, function(data) {
       res.json(data);
